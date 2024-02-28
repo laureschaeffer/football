@@ -85,4 +85,30 @@ class Joueur{
     public function ajouterCarriere(Carriere $carriere){
         $this->carrieres[]=$carriere ;
     }
+
+    // age du joueur
+    public function calculAge(){
+        $ajd = new DateTime();
+        $age = $ajd->diff($this->date_naissance);
+        return $age->y;
+    }
+
+    // methode qui affiche les infos de la carriere d'un joueur
+    public function carriereJoueur(){
+        
+        $result= "<div class='card' id='joueur'>
+            <div class='card-header'>
+                <h3>".$this."</h3>
+                <p>".$this->pays." - ".$this->calculAge()." ans </p>
+            </div>
+            <div class='card-body'>";
+            foreach($this->carrieres as $carriere){
+                $result.="<p>".$carriere->getEquipe()." (".$carriere->getAnneeSaison().") </p>";
+            }
+         $result.=" </div>
+        </div>";
+        return $result ;
+    }
+
+
 }

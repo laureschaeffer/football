@@ -1,0 +1,29 @@
+#wrapper{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(68 117 136 / 13%);
+    width: 100%;
+    height: 100%;
+}
+
+p, h3{
+    color: white;
+}
+
+/* --------containers-----------  */
+
+/* ---------cards--------------- */
+
+
+/* -------card joueurs */
+
+
+
+.card-header{
+    font-size: larger;
+}
+
+
+
+
+
+/* joueur equipe : #6783B3  */

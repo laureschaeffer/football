@@ -70,4 +70,14 @@ class Equipe{
     }
 
 
+    // retourne la liste des joueurs d'une équipe
+    public function joueursEquipe(){
+        foreach($this->carrieres as $carriere){
+            echo $carriere->getJoueur();
+        }
+    }
+    
+
+
+
 }

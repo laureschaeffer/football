@@ -63,7 +63,5 @@ class Carriere{
         return $this->joueur." dans l'équipe ".$this->equipe." (".$this->anneeSaison.")";
     }
 
-    public function dump(){
-        return var_dump($this);
-    }
+
 }

@@ -53,5 +53,22 @@ class Pays{
         var_dump($this->equipePays);
     }
 
+    // fonction qui renvoie toutes les équipes d'un pays
+    public function afficherEquipe(){
+         $result=" <div class='card' id='equipe'>
+            <div class='card-header'>
+              <h3> $this </h3> 
+            </div>
+            <div class='card-body'>";
+                foreach($this->equipePays as $equipe){
+                    $result.="<p>".$equipe->getNom()."</p>";
+                }
+                
+        $result.= " </div>
+        </div>";
+        return $result;
+    }
+
+        
 
 }
