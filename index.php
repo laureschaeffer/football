@@ -57,12 +57,12 @@ $cLionelM2= new Carriere("2004", $fcBarcelone, $lionelM);
 <body>
     <div id="wrapper">
         <div id="pays">
-            <h2>Equipes d'un pays</h2>
+            
             <?=$france->afficherEquipe()?>
             <?=$espagne->afficherEquipe()?>
         </div>
         <div id="joueurs">
-            <h2>Carrieres d'un joueur</h2>
+            
             <?=$lionelM->carriereJoueur()?>
             <?=$arnauT->carriereJoueur()?>
             <?=$lucasB->carriereJoueur()?>
@@ -71,8 +71,8 @@ $cLionelM2= new Carriere("2004", $fcBarcelone, $lionelM);
             <?=$fredericG->carriereJoueur()?>
             <?=$saidouS->carriereJoueur()?>
         </div>
-        <div id="equipe">
-            <h2>Composition d'une equipe </h2>
+        <div id="equipes">
+            
             <?=$psg->joueursEquipe()?>
             <?=$rcStras->joueursEquipe()?>
             <?=$fcBarcelone->joueursEquipe()?>

@@ -96,7 +96,7 @@ class Joueur{
     // methode qui affiche les infos de la carriere d'un joueur
     public function carriereJoueur(){
         
-        $result= "<div class='card' id='joueur'>
+        $result= "<div class='card-joueur'>
             <div class='card-header'>
                 <h3>".$this."</h3>
                 <p>".$this->pays." - ".$this->calculAge()." ans </p>

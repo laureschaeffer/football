@@ -87,7 +87,7 @@ class Equipe{
 
     // retourne la liste des joueurs d'une équipe
     public function joueursEquipe(){
-        $result= "<div class='card' id='equipe'>
+        $result= "<div class='card-equipe'>
             <div class='card-header'>
                 <h3>$this</h3>
                 <p>$this->pays - $this->anneeCreation </p>

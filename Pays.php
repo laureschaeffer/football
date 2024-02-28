@@ -55,7 +55,7 @@ class Pays{
 
     // fonction qui renvoie toutes les équipes d'un pays
     public function afficherEquipe(){
-         $result=" <div class='card' id='equipe'>
+         $result=" <div class='card-pays'>
             <div class='card-header'>
               <h3> $this </h3> 
             </div>
