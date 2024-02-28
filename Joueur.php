@@ -103,7 +103,8 @@ class Joueur{
             </div>
             <div class='card-body'>";
             foreach($this->carrieres as $carriere){
-                $result.="<p>".$carriere->getEquipe()." (".$carriere->getAnneeSaison().") </p>";
+                // ici carriere renvoie le tostring de l'objet Carriere(l'année de la saison)
+                $result.="<p>".$carriere->getEquipe()." (".$carriere.") </p>";
             }
          $result.=" </div>
         </div>";

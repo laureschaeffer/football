@@ -26,9 +26,9 @@ $saidouS= new Joueur("Saïdou", "Sow", "2002-07-04", $guinee);
 $lionelM= new Joueur("Lionel", "Messi", "1987-06-24", $argentine);
 
 //equipe string $nom, Pays $pays
-$psg= new Equipe("Paris Saint-Germain", $france);
-$rcStras = new Equipe("Racing Club Strasbourg", $france);
-$fcBarcelone= new Equipe("FC Barcelone", $espagne);
+$psg= new Equipe("Paris Saint-Germain", $france, 1970);
+$rcStras = new Equipe("Racing Club Strasbourg", $france, 1906);
+$fcBarcelone= new Equipe("FC Barcelone", $espagne, 1899);
 
 //carriere string $anneeSaison, Equipe $equipe, Joueur $joueur
 $cArnauT= new Carriere("2024", $psg, $arnauT);
@@ -57,10 +57,12 @@ $cLionelM2= new Carriere("2004", $fcBarcelone, $lionelM);
 <body>
     <div id="wrapper">
         <div id="pays">
+            <h2>Equipes d'un pays</h2>
             <?=$france->afficherEquipe()?>
             <?=$espagne->afficherEquipe()?>
         </div>
         <div id="joueurs">
+            <h2>Carrieres d'un joueur</h2>
             <?=$lionelM->carriereJoueur()?>
             <?=$arnauT->carriereJoueur()?>
             <?=$lucasB->carriereJoueur()?>
@@ -68,6 +70,12 @@ $cLionelM2= new Carriere("2004", $fcBarcelone, $lionelM);
             <?=$matthieuD->carriereJoueur()?>
             <?=$fredericG->carriereJoueur()?>
             <?=$saidouS->carriereJoueur()?>
+        </div>
+        <div id="equipe">
+            <h2>Composition d'une equipe </h2>
+            <?=$psg->joueursEquipe()?>
+            <?=$rcStras->joueursEquipe()?>
+            <?=$fcBarcelone->joueursEquipe()?>
         </div>
 
 

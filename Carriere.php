@@ -60,7 +60,7 @@ class Carriere{
 
     //tostring
     public function __toString(){
-        return $this->joueur." dans l'équipe ".$this->equipe." (".$this->anneeSaison.")";
+        return $this->anneeSaison;
     }
 
 

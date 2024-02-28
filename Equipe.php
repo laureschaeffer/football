@@ -3,11 +3,13 @@
 class Equipe{
     private string $nom;
     private Pays $pays;
+    private int $anneeCreation;
     private array $carrieres;
 
-    public function __construct(string $nom, Pays $pays){
+    public function __construct(string $nom, Pays $pays, int $anneeCreation){
         $this->nom=$nom;
         $this->pays=$pays;
+        $this->anneeCreation=$anneeCreation;
 
         // dans la méthode créée dans la classe pays, j'ajoute l'objet Equipe au tableau
         $this->pays->ajouterEquipe($this);
@@ -54,6 +56,19 @@ class Equipe{
     public function setCarrieres($carrieres)
     {
         $this->carrieres = $carrieres;
+        
+        return $this;
+    }
+
+    public function getAnneeCreation()
+    {
+        return $this->anneeCreation;
+    }
+
+
+    public function setAnneeCreation($anneeCreation)
+    {
+        $this->anneeCreation = $anneeCreation;
 
         return $this;
     }
@@ -72,12 +87,21 @@ class Equipe{
 
     // retourne la liste des joueurs d'une équipe
     public function joueursEquipe(){
-        foreach($this->carrieres as $carriere){
-            echo $carriere->getJoueur();
+        $result= "<div class='card' id='equipe'>
+            <div class='card-header'>
+                <h3>$this</h3>
+                <p>$this->pays - $this->anneeCreation </p>
+            </div>
+           <div class='card-body'>";
+            //boucle pour avoir tous les joueurs
+            foreach ($this->carrieres as $carriere) {
+                $result.= "<p>".$carriere->getJoueur()." (".$carriere->getAnneeSaison().")</p>";
+            }
+            $result.= "</div>
+            </div>";
+            return $result;
         }
-    }
-    
 
-
+            
 
 }
